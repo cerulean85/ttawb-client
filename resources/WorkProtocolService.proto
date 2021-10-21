@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+message WorkRequest {
+  string message = 1;
+}
+
+message WorkResponse {
+  string result = 1;
+}
+
+service WorkProtocol {
+  rpc greeting(WorkRequest) returns (WorkResponse) {}
+}
